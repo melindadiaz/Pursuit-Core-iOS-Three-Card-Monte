@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
     let images = ["threeCard", "kingCard","cardBackRed"]
     
    
@@ -16,20 +16,23 @@ class ViewController: UIViewController {
    
     
     @IBOutlet weak var pickACardLabel: UILabel!
+    
     @IBOutlet weak var card0: UIButton!
     
     @IBOutlet weak var card1: UIButton!
     
     @IBOutlet weak var card2: UIButton!
+    
     @IBOutlet weak var resultLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     @IBAction func playAgain(_ sender: UIButton) {
+        
          enableCards(true)
            card0.setBackgroundImage(UIImage(named: images[2]), for: UIControl.State.normal)
             card1.setBackgroundImage(UIImage(named: images[2]), for: UIControl.State.normal)

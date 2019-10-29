@@ -8,17 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ThreeCardMonte" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="ThreeCardMonte" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poker chips" translatesAutoresizingMaskIntoConstraints="NO" id="mEL-WI-azy">
+                                <rect key="frame" x="0.0" y="103" width="414" height="759"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxJ-Ds-EMJ">
                                 <rect key="frame" x="30" y="345" width="88" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="cardBackRed"/>
                                 <connections>
                                     <action selector="cards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pQM-eB-Qsz"/>
@@ -27,6 +32,7 @@
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTu-Hu-NdN">
                                 <rect key="frame" x="163" y="345" width="88" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="cardBackRed"/>
                                 <connections>
                                     <action selector="cards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J0f-R4-JKM"/>
@@ -35,6 +41,7 @@
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAG-fq-zFv">
                                 <rect key="frame" x="306" y="345" width="88" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="cardBackRed"/>
                                 <connections>
                                     <action selector="cards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yO6-ZV-aML"/>
@@ -50,6 +57,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lm8-FV-gaH">
                                 <rect key="frame" x="107" y="239" width="201" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.74430972799999995" green="1" blue="0.80779825279999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -57,6 +65,7 @@
                             <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAl-Hv-z3X">
                                 <rect key="frame" x="102" y="667" width="201" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.74430972799999995" green="1" blue="0.80779825279999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
                                 <state key="normal" title="Play Again?">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -75,7 +84,6 @@
                         <outlet property="card1" destination="UTu-Hu-NdN" id="5sw-ve-Xpz"/>
                         <outlet property="card2" destination="EAG-fq-zFv" id="a9k-qE-MMm"/>
                         <outlet property="pickACardLabel" destination="Lm8-FV-gaH" id="C92-hF-bs5"/>
-                        <outlet property="playAgain" destination="mAl-Hv-z3X" id="RlD-bd-TEW"/>
                         <outlet property="resultLabel" destination="z8X-VY-RO8" id="pGj-Fw-KEg"/>
                     </connections>
                 </viewController>
@@ -86,5 +94,6 @@
     </scenes>
     <resources>
         <image name="cardBackRed" width="686" height="976"/>
+        <image name="poker chips" width="4096" height="2730"/>
     </resources>
 </document>
